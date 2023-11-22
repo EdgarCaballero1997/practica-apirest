@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const port = 3000;
 const rutas = `RUTAS: |
                Usuarios: /api/usuarios |
                Usuario 1: /api/usuarios/1 |
@@ -30,6 +31,6 @@ app.get('/api/usuarios/:id', (request, response) => {
     }
 });
 
-app.listen(3000, () => {
-    console.log('Server listen on port 3000');
+app.listen(port, () => {
+    console.log(`Server listen on port ${port}`);
 });
